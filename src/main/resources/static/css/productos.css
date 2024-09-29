@@ -1,0 +1,39 @@
+#productos {
+    background-color: #4996bd;
+}
+.avatar{
+    height: 40px;
+    filter: invert();
+}
+.logo{
+    height: 60px;
+}
+.navbar{
+    background-color: #013362;
+}
+.navbar a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.nav-link{
+    color: white;
+    &:hover{
+        color: #ffff00;
+        scale: 1.1;
+        transition: all 0.2s ease-in-out;
+    }
+    &:hover .avatar{
+        filter: invert(82%) sepia(100%) saturate(4459%) hue-rotate(355deg) brightness(102%) contrast(111%);
+    }
+}
+
+.card {
+    height: 600px;
+    & img{
+        height: 300px;
+        object-fit: contain;
+    }
+}

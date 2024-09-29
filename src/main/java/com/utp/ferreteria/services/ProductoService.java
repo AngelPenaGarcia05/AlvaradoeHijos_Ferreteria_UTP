@@ -21,6 +21,13 @@ public class ProductoService {
     public List<Producto> obtenerRangoProductos(int inicio, int cantidad){
         return productoRepository.findAll().stream().skip(inicio).limit(cantidad).toList();
     }
+    public List<Producto> obtenerProductosPorNombreContiene(String filtro){
+        return productoRepository.findByNombreContaining(filtro);
+    }
+
+    public List<Producto> obtenerProductosPorCategoria(List<Producto> productos, String categoria){
+        return productos.stream().filter(producto -> producto.getCategoria().equals(categoria)).toList();
+    }
 
     public Producto obtenerProductoPorId(Long id){
         return productoRepository.findById(id).orElse(null);
