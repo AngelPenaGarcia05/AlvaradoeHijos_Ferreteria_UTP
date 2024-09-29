@@ -41,6 +41,9 @@ public class Producto {
     @Column(length = 100)
     private String descripcion;
 
+    @Column
+    private String imagenURL;
+
     @Column(length = 100)
     private String categoria;
 

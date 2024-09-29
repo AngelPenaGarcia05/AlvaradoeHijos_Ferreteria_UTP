@@ -37,6 +37,12 @@ public class Empleado {
     @Column(length = 100)
     private String apellidos;
 
+    @Column(length = 8)
+    private String dni;
+
+    @Column
+    private String contrasena;
+
     @Column(length = 100)
     private String email;
 

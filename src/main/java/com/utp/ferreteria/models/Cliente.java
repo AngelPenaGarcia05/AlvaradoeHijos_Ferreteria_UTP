@@ -31,7 +31,16 @@ public class Cliente {
     private Long id;
     
     @Column(length = 100)
-    private String nombre;
+    private String nombres;
+
+    @Column(length = 100)
+    private String apellidos;
+
+    @Column()
+    private String contrasena;
+
+    @Column(length = 8)
+    private String dni;
 
     @Column(length = 100)
     private String direccion;

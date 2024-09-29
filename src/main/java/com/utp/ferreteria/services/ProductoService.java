@@ -18,10 +18,13 @@ public class ProductoService {
         return productoRepository.findAll();
     }
 
+    public List<Producto> obtenerRangoProductos(int inicio, int cantidad){
+        return productoRepository.findAll().stream().skip(inicio).limit(cantidad).toList();
+    }
+
     public Producto obtenerProductoPorId(Long id){
         return productoRepository.findById(id).orElse(null);
     }
-
     public Producto guardarProducto(Producto producto){
         return productoRepository.save(producto);
     }
