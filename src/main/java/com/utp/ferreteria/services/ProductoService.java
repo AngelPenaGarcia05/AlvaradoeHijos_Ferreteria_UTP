@@ -28,6 +28,9 @@ public class ProductoService {
     public List<Producto> obtenerProductosPorCategoria(List<Producto> productos, String categoria){
         return productos.stream().filter(producto -> producto.getCategoria().equals(categoria)).toList();
     }
+    public List<Producto> obtenerProductosRelacionados(Long id){
+        return productoRepository.findByCategoria(productoRepository.findById(id).get().getCategoria());
+    }
 
     public Producto obtenerProductoPorId(Long id){
         return productoRepository.findById(id).orElse(null);
